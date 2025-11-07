@@ -1,0 +1,501 @@
+[
+  {
+    "schema": "consumers",
+    "table": "gpaq",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "health_answer",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "health_playlist",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "health_point",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "health_question",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "payment",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "rank",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "refunds",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user",
+    "row_count": 100,
+    "sample": [
+      {
+        "id": 1,
+        "active": true,
+        "name": "Sr. Liam Andrade",
+        "registry_code": null,
+        "email": "mda-mota@example.org",
+        "phone": null,
+        "password": "senha_fake_hash_123",
+        "occupation": null,
+        "sector": null,
+        "weight": null,
+        "height": null,
+        "diabetic": false,
+        "hypertensive": false,
+        "birth_date": null,
+        "gender": null,
+        "zip_code": null,
+        "address": null,
+        "address_number": null,
+        "fcm_token": null,
+        "rank_id": null,
+        "external_id": null,
+        "health_level": null,
+        "user_type": null,
+        "created_at": "2025-05-01 06:32:13",
+        "updated_at": "2025-11-05 00:10:06.698418"
+      },
+      {
+        "id": 2,
+        "active": true,
+        "name": "Maria Montenegro",
+        "registry_code": null,
+        "email": "jramos@example.com",
+        "phone": null,
+        "password": "senha_fake_hash_123",
+        "occupation": null,
+        "sector": null,
+        "weight": null,
+        "height": null,
+        "diabetic": false,
+        "hypertensive": false,
+        "birth_date": null,
+        "gender": null,
+        "zip_code": null,
+        "address": null,
+        "address_number": null,
+        "fcm_token": null,
+        "rank_id": null,
+        "external_id": null,
+        "health_level": null,
+        "user_type": null,
+        "created_at": "2025-01-24 17:57:41",
+        "updated_at": "2025-11-05 00:10:06.702690"
+      },
+      {
+        "id": 3,
+        "active": true,
+        "name": "Otto Ramos",
+        "registry_code": null,
+        "email": "luararocha@example.org",
+        "phone": null,
+        "password": "senha_fake_hash_123",
+        "occupation": null,
+        "sector": null,
+        "weight": null,
+        "height": null,
+        "diabetic": false,
+        "hypertensive": false,
+        "birth_date": null,
+        "gender": null,
+        "zip_code": null,
+        "address": null,
+        "address_number": null,
+        "fcm_token": null,
+        "rank_id": null,
+        "external_id": null,
+        "health_level": null,
+        "user_type": null,
+        "created_at": "2025-03-01 11:08:20",
+        "updated_at": "2025-11-05 00:10:06.703335"
+      }
+    ]
+  },
+  {
+    "schema": "consumers",
+    "table": "user_appointment",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_card",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_exercise",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_gpaq",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_health_feedback",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_health_form",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_health_playlist",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_health_point",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_health_stamp",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_partner_link",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_scheduling",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_time",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_training",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_training_book",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_training_exercise",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "consumers",
+    "table": "user_training_sheet",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "document",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "log",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "login_log",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "owner",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "owner_route",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "owner_rule",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "recovery_account",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "settings",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "policies",
+    "table": "support",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "category",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "partner",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "partner_activity",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "partner_address",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "partner_category",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "partner_employee",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "partner_rule",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "partner_schedule",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "providers",
+    "table": "partner_social_network",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "communities_publication",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "communities_publication_tag",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "communities_social_event",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "communities_social_group",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "communities_tag",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "companies_billet",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "companies_client",
+    "row_count": 10,
+    "sample": [
+      {
+        "id": 1,
+        "plan_id": 3,
+        "name": "Pinto",
+        "cnpj": "95.048.326/0001-03",
+        "active": true,
+        "created_at": "2025-11-05 00:11:51.328279",
+        "updated_at": "2025-11-05 00:11:51.328279"
+      },
+      {
+        "id": 2,
+        "plan_id": 3,
+        "name": "Novaes Costa - ME",
+        "cnpj": "68.271.409/0001-86",
+        "active": true,
+        "created_at": "2025-11-05 00:11:51.331310",
+        "updated_at": "2025-11-05 00:11:51.331310"
+      },
+      {
+        "id": 3,
+        "plan_id": 2,
+        "name": "da Costa Ltda.",
+        "cnpj": "21.798.054/0001-14",
+        "active": true,
+        "created_at": "2025-11-05 00:11:51.331887",
+        "updated_at": "2025-11-05 00:11:51.331887"
+      }
+    ]
+  },
+  {
+    "schema": "public",
+    "table": "companies_client_collaborator",
+    "row_count": 29,
+    "sample": [
+      {
+        "id": 1,
+        "client_id": 2,
+        "user_id": 29,
+        "role": "Operacional",
+        "created_at": "2025-11-05 00:11:51.335381",
+        "updated_at": "2025-11-05 00:11:51.335381"
+      },
+      {
+        "id": 2,
+        "client_id": 10,
+        "user_id": 96,
+        "role": "Analista",
+        "created_at": "2025-11-05 00:11:51.339100",
+        "updated_at": "2025-11-05 00:11:51.339100"
+      },
+      {
+        "id": 3,
+        "client_id": 9,
+        "user_id": 20,
+        "role": "Operacional",
+        "created_at": "2025-11-05 00:11:51.339872",
+        "updated_at": "2025-11-05 00:11:51.339872"
+      }
+    ]
+  },
+  {
+    "schema": "public",
+    "table": "companies_client_token",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "companies_indicator",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "companies_indicator_consolidation",
+    "row_count": 0,
+    "sample": []
+  },
+  {
+    "schema": "public",
+    "table": "companies_plan",
+    "row_count": 3,
+    "sample": [
+      {
+        "id": 1,
+        "name": "Essencial",
+        "description": "Plano b\u00e1sico para pequenas empresas",
+        "price": "99.90",
+        "active": true,
+        "created_at": "2025-11-05 00:11:51.322151",
+        "updated_at": "2025-11-05 00:11:51.322151"
+      },
+      {
+        "id": 2,
+        "name": "Profissional",
+        "description": "Plano intermedi\u00e1rio com suporte completo",
+        "price": "249.90",
+        "active": true,
+        "created_at": "2025-11-05 00:11:51.322151",
+        "updated_at": "2025-11-05 00:11:51.322151"
+      },
+      {
+        "id": 3,
+        "name": "Enterprise",
+        "description": "Plano corporativo personalizado",
+        "price": "499.90",
+        "active": true,
+        "created_at": "2025-11-05 00:11:51.322151",
+        "updated_at": "2025-11-05 00:11:51.322151"
+      }
+    ]
+  },
+  {
+    "schema": "public",
+    "table": "companies_user_affiliation",
+    "row_count": 0,
+    "sample": []
+  }
+]
