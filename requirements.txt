@@ -53,3 +53,17 @@ tzdata==2025.2
 urllib3==2.5.0
 uvicorn==0.38.0
 watchdog==6.0.0
+
+
+# Backend (FastAPI)
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-dotenv
+
+# Frontend (Streamlit)
+streamlit
+requests
+pandas
+plotly

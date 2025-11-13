@@ -1,40 +1,37 @@
-# Projeto BI MVP - Dashboard Operacional e Executivo
+# PROJETO BI MVP - Dashboard Operacional e Executivo
 
-Este projeto é um MVP (Minimum Viable Product) de uma plataforma de Business Intelligence. Ele consiste em um backend (API) construído com FastAPI que lê dados de um banco PostgreSQL e um frontend (Dashboard) construído com Streamlit para visualização.
+Um dashboard de BI focado em...
 
-O projeto também inclui scripts para "povoar" o banco de dados com dados falsos (`generate_fake_data.py`) para fins de demonstração.
+## Demo Rápida (Opcional)
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Backend:** Python, FastAPI
-* **Frontend:** Streamlit
-* **Banco de Dados:** PostgreSQL
-* **Conexão com BD:** SQLAlchemy
-* **Geração de Dados:** Faker
-* **Ambiente:** .venv (Gerenciamento de pacotes via `requirements.txt`)
+Este projeto foi construído utilizando as seguintes tecnologias:
+
+* **Python 3.11**
+* **PostgreSQL** (para o banco de dados)
+* **Streamlit** ()
+* **PgAdmin** (para gerenciamento visual do DB)
 
 ---
 
-## 🚀 Como Rodar o Projeto
+## 📋 Pré-requisitos
 
-Siga este guia passo a passo para configurar e executar o projeto em sua máquina local.
+Antes de começar, garanta que você tenha os seguintes softwares instalados em sua máquina:
 
-### Pré-requisitos
-
-* [Git](https://git-scm.com/downloads)
-* [Python](https://www.python.org/downloads/) (Este projeto foi desenvolvido com a versão 3.11)
+* [Git](https://git-scm.com/)
+* [Python 3.11](https://www.python.org/downloads/release/python-3110/)
 * [PostgreSQL](https://www.postgresql.org/download/) (Um servidor de banco de dados rodando localmente)
-* (Opcional) [pgAdmin](https://www.pgadmin.org/download/) para gerenciar seu banco de dados visualmente.
 
 ---
 
-### ⚙️ Instruções de Instalação
+## 🚀 Instalação e Execução
 
-#### 1. Clonar o Repositório (O Código)
+Siga os passos abaixo para configurar e rodar o projeto localmente.
 
-Primeiro, obtenha o código-fonte do GitHub:
+### 1. Clonar o Repositório
 
 ```bash
 git clone [https://github.com/rutra17/Freela.git](https://github.com/rutra17/Freela.git)

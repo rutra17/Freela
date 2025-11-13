@@ -1,0 +1,15 @@
+# Backend (API)
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-dotenv
+
+# Frontend (Dashboards)
+streamlit
+requests
+plotly
+pandas
+
+# População de Dados
+Faker
