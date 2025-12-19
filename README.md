@@ -1,35 +1,32 @@
-# BI MVP Project - Operational & Executive Dashboard 📊
+# 📊 GymGo - Business Intelligence Platform (MVP)
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-green?logo=fastapi)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-
----
+![Project Status](https://img.shields.io/badge/Status-MVP%20Complete-green)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-teal)
 
 ## 🧠 Overview
 
-This repository contains a **Minimum Viable Product (MVP)** for a **Business Intelligence Platform**.  
-The system is composed of:
+This repository contains a **Minimum Viable Product (MVP)** for a **Business Intelligence Platform** focused on the fitness industry (Gyms & Corporate Wellness). The system simulates a real-world environment with distinct company cultures, user behaviors, and financial transactions.
 
-- **Backend**: REST API built with **FastAPI** that consumes data from **PostgreSQL**.
-- **Frontend**: Interactive **Streamlit** dashboard for data visualization.
-- **Data Generation**: Script to populate the database with synthetic data (`generate_fake_data.py`).
+**The system is composed of:**
+
+* **Backend:** REST API built with **FastAPI** & **SQLAlchemy**.
+* **Frontend:** Interactive **Streamlit** dashboards for different personas (B2B Clients, Partners, End-Users).
+* **Data Engine:** Sophisticated Python scripts (`Faker`) to populate the **PostgreSQL** database with realistic, diverse, and interconnected data (Simulating retention, churn, and gamification).
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|--------|-------------|
-| **Backend** | FastAPI, Python |
-| **Frontend** | Streamlit |
-| **Database** | PostgreSQL |
-| **ORM / Driver** | SQLAlchemy, Psycopg2 |
-| **Data Generator** | Faker |
-| **Visualization** | Plotly |
-| **Environment** | `.venv` + `requirements.txt` |
+| Layer              | Technology                        |
+| :----------------- | :-------------------------------- |
+| **Backend**        | Python, FastAPI, Pydantic         |
+| **Frontend**       | Streamlit, Plotly Express, Pandas |
+| **Database**       | PostgreSQL                        |
+| **ORM / Driver**   | SQLAlchemy, Psycopg2              |
+| **ETL / Data Gen** | Faker, Python Scripts             |
+| **Environment**    | Dotenv, Venv                      |
 
 ---
 
@@ -39,10 +36,10 @@ The system is composed of:
 
 Make sure you have the following installed:
 
-- [Git](https://git-scm.com/)
-- [Python 3.10+](https://www.python.org/downloads/)
-- [PostgreSQL](https://www.postgresql.org/download/)
-- (Optional) [pgAdmin](https://www.pgadmin.org/) for visual DB management
+* Git
+* Python 3.10+
+* PostgreSQL (Local or Cloud)
+* (Optional) VS Code (Recommended)
 
 ### 2. Clone the Repository
 
@@ -51,26 +48,18 @@ git clone https://github.com/rutra17/FREELA.git
 cd FREELA
 ```
 
-### 3. Create a PostgreSQL Database
-
-Use `psql` or pgAdmin to create an empty database:
-
-```sql
-CREATE DATABASE mydb;
-```
-
-### 4. Environment Variables
+### 3. Setup Environment Variables
 
 Create a `.env` file in the project root:
 
 ```ini
 # .env
-DATABASE_URL=postgresql://YOUR_USER:YOUR_PASSWORD@localhost:5432/mydb
+DATABASE_URL=postgresql://YOUR_USER:YOUR_PASSWORD@localhost:5432/gymgo_db
 ```
 
-> ⚠️ This file must **NOT** be committed to GitHub.
+*⚠️ Note: Replace `YOUR_USER`, `YOUR_PASSWORD`, and `gymgo_db` with your local postgres credentials.*
 
-### 5. Virtual Environment Setup
+### 4. Virtual Environment Setup
 
 ```bash
 # Windows
@@ -82,7 +71,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 6. Install Dependencies
+### 5. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -90,109 +79,95 @@ pip install -r requirements.txt
 
 ---
 
-## 🧩 Database Setup
+## 🧩 Database & Data Generation
 
-Run the SQL scripts in the following order to create all schemas and tables:
+Instead of running SQL files manually, use the automated scripts included in the project.
 
-1. `consumer_db.sql` — Creates the `consumers` schema
-2. `providers.sql` — Creates the `providers` schema
-3. `companies.sql` — Creates the `companies` schema
-4. `communities.sql` — Creates the `communities` schema
-5. `policies.sql` — Creates the `policies` schema
-6. `analytics.sql` — Creates the `analytics` schema
-7. `gamification_b2b.sql` — Adds tables to `consumers` and `companies`
-8. `scores.sql` — Adds `user_mev_score` table to `consumers`
+**Step 1: Create Schemas & Tables**
+This script drops existing schemas and recreates the entire structure (Consumers, Providers, Companies, Analytics, etc.).
 
-> 💡 Tip: Execute each `.sql` file via pgAdmin’s Query Tool or `psql`.
+```bash
+python reset_database.py
+```
 
----
-
-## ▶️ Running the Application
-
-You’ll need **three terminals** open:
-
-### Terminal 1 — Populate the Database
+**Step 2: Populate with Synthetic Data**
+This script generates users, companies with specific cultures, transactions, and gamification history.
 
 ```bash
 python generate_fake_data.py
 ```
 
-Wait until you see messages like *“Populating 100 records...”* and *“Database populated successfully...”*.
-
-### Terminal 2 — Run the Backend (FastAPI)
-
-```bash
-uvicorn main:app --reload
-```
-
-The API should be available at:
-```
-http://127.0.0.1:8000
-```
-
-### Terminal 3 — Run the Frontend (Streamlit)
-
-```bash
-streamlit run Homepage.py
-```
+*Wait until you see the message: "Banco populado com sucesso!"*
 
 ---
 
-## 🌐 Accessing the Dashboard
+## ▶️ Running the Application
 
-Once Streamlit launches, it should automatically open in your browser.  
-If not, navigate manually to:
+You will need **two terminals** open (or run in background):
 
+### Terminal 1 — Backend (API)
+
+```bash
+uvicorn backend.main:app --reload
 ```
-http://localhost:8501
+
+*Access API Docs at: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)*
+
+### Terminal 2 — Frontend (Dashboards)
+
+```bash
+streamlit run dashboard/Homepage.py
 ```
+
+*The dashboard will open automatically at: [http://localhost:8501](http://localhost:8501)*
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
-```
+```text
 FREELA/
 │
-├── .venv/                   # Virtual environment (ignored)
-├── backend/                 # Optional backend folder
-├── dashboard/               # Optional Streamlit folder
-├── etl/                     # ETL scripts
+├── backend/                 # API Logic
+│   └── main.py              # FastAPI Entry point
 │
-├── .env                     # Environment variables (ignored)
-├── .gitignore               # Git ignore file
-├── Homepage.py              # Main Streamlit app
-├── 1_Visao_Parceiro.py      # Dashboard page 1
-├── 2_Visao_B2B.py           # Dashboard page 2
-├── 3_Visao_Usuario_Final.py # Dashboard page 3
-├── 4_Visao_Interna.py       # Dashboard page 4
+├── dashboard/               # Frontend Application
+│   ├── Homepage.py          # Main Streamlit Navigation
+│   └── pages/
+│       ├── 1_Visao_Parceiro.py      # Gym/Partner KPIs
+│       ├── 2_Visao_B2B.py           # Corporate Clients (ROI & Health)
+│       ├── 3_Visao_Usuario_Final.py # User Gamification & Stats
+│       └── 4_Visao_Interna.py       # Admin/Internal View
 │
-├── main.py                  # FastAPI main app
-├── generate_fake_data.py    # Database population script
+├── database/                # SQL Schemas
+│   ├── analytics.sql
+│   ├── companies.sql
+│   ├── consumer_db.sql
+│   ├── ... (other schemas)
 │
-├── requirements.txt         # Dependencies
-├── README.md                # This file
-│
-└── *.sql                    # SQL schema creation scripts
+├── generate_fake_data.py    # Main Data Generator (The "Brain")
+├── reset_database.py        # Database Reset Automation
+├── requirements.txt         # Project Dependencies
+├── .env                     # Credentials (Not tracked by Git)
+└── README.md                # Project Documentation
 ```
 
 ---
 
-## 💡 Best Practices
+## 💡 Key Features
 
-- Never commit `.env` or sensitive credentials.
-- Keep `requirements.txt` updated after installing new dependencies.
-- If you encounter `relation already exists` errors, modify SQL scripts to include `IF NOT EXISTS`.
-- Use virtual environments for dependency isolation.
+* **B2B Dashboard:** Calculates the "Fitness Factor" of companies, showing ROI based on employee health improvements and engagement.
+* **Gamification Engine:** Tracks user streaks, "Morning Person" habits, and social workouts to generate badges and rewards.
+* **Financial Analytics:** Tracks LTV (Lifetime Value), CAC (Customer Acquisition Cost), and Revenue by Region (Zip Code).
+* **Diverse Data Simulation:** The data generator creates "Gym Goers" vs "Sedentary" profiles to ensure realistic graphs, avoiding flat 100% metrics.
 
 ---
 
 ## 🧾 License
 
-### MIT License
+**MIT License**
 
-```
-Copyright (c) 2025 Artur Tabosa Rodrigues Reis
+Copyright (c) 2025 **Artur Tabosa Rodrigues Reis**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -203,16 +178,3 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
----
-
-> 🧩 Developed by **Artur Tabosa Rodrigues Reis** — 2025
